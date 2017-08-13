@@ -1,0 +1,30 @@
+{
+  "name": "movies-management-application",
+  "description": "This is a detail oriented movies management application built in JavaScript and jQuery for Front-end.",
+  "main": "index.html",
+  "authors": [
+    "Zia"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery",
+    "FontAwesome",
+    "Grunt"
+  ],
+  "homepage": "https://github.com/ziaongit/Movies-Management-Application",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "components-font-awesome": "^4.7.0"
+  }
+}

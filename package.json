@@ -1,0 +1,36 @@
+{
+  "name": "movies-management-application",
+  "version": "1.0.0",
+  "description": "This is a detail oriented movies management application built in JavaScript and jQuery for Front-end.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziaongit/Movies-Management-Application.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery",
+    "FontAwesome",
+    "Grunt"
+  ],
+  "author": "Zia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziaongit/Movies-Management-Application/issues"
+  },
+  "homepage": "https://github.com/ziaongit/Movies-Management-Application#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
