@@ -8,11 +8,15 @@
     <meta name="author" content="Zia Khan">
     <meta name="Movies Application" content="This is a detail oriented movies application built in JavaScript and jQuery for Front-end.">
     <title>Movies Application</title>
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
     <!-- Stylesheet -->
     <link href="resources/css/dist/style.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-      <!-- Fixed navbar -->
+      <!-- Navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
           <div class="logo">Movies Application</div>
@@ -20,12 +24,29 @@
       </div>
     </nav>
 
-    <!-- Begin page content -->
+    <!-- Page Content Start -->
     <div class="container">
-      <div class="page-header text-center">
-        <h1>Welcome To Movies Application !!</h1>
+      <div class="movies_filters">
+        <div class="filter open">
+          <span class="fa fa-arrow-circle-o-down"></span>
+          <span class="btn_title">Folter By</span>
+        </div>
+        <div class="filter_container">
+          <label>Category</label>
+          <select id="categories">
+            <option selected value="all">All categories</option>
+          </select>
+
+          <label>Directors</label>
+          <select id="directors">
+            <option selected value="all">All Directors</option>
+          </select>
+
+        </div>
       </div>
+      
     </div>
+    <!-- Page Content End -->
 
     <!-- Footer Start -->
     <footer class="footer">

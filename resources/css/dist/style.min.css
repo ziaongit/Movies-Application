@@ -2344,29 +2344,23 @@
 }
 
  
- /* Sticky footer styles
+ /* General styles start
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
+  font-family: Roboto;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
 }
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
 body > .container {
   padding: 60px 15px 0;
@@ -2383,3 +2377,63 @@ body > .container {
 code {
   font-size: 80%;
 }
+/* General styles end
+-------------------------------------------------- */
+
+/* Logo styles start
+-------------------------------------------------- */
+.logo {
+    text-align: center;
+    font-family: Anton;
+    font-size: 30px;
+    color: #d9534f;
+    padding: 10px 0px;
+}
+/* Logo styles end
+-------------------------------------------------- */
+
+/* Movies filter styles start
+-------------------------------------------------- */
+.movies_filters {
+  border-bottom: 1px solid #cacaca;
+}
+.movies_filters .open {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 10px;
+}
+.movies_filters .open .fa {
+  margin-right: 5px;
+  color: #d9534f;
+  transition: all 0.2s ease;
+}
+.movies_filters .open.active .fa {
+  -webkit-transform: rotate(-100deg);
+}
+.movies_filters .filter_container {
+  border-top:1px solid #cacaca;
+  padding: 10px;
+  background: #f3f3f3;
+  /* display: none; */
+}
+.movies_filters .filter_container label {
+  font-size: 13px;
+}
+.movies_filters .filter_container select {
+  margin-right: 30px;
+}
+/* Movies fileter styles end
+-------------------------------------------------- */
+
+/*  styles start
+-------------------------------------------------- */
+
+/*  styles end
+-------------------------------------------------- */
+
+/*  styles start
+-------------------------------------------------- */
+
+/*  styles end
+-------------------------------------------------- */
