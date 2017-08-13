@@ -53,6 +53,7 @@ code {
 }
 .movies_filters .open {
   text-align: center;
+  cursor: pointer;
   font-size: 17px;
   font-weight: 300;
   padding: 10px;
@@ -69,7 +70,7 @@ code {
   border-top:1px solid #cacaca;
   padding: 10px;
   background: #f3f3f3;
-  /* display: none; */
+  display: none;
 }
 .movies_filters .filter_container label {
   font-size: 13px;
