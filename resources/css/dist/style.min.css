@@ -2430,6 +2430,10 @@ code {
   box-sizing: border-box;
   padding: 20px;
 }
+.movie_item {
+  margin-bottom: 15px;
+  border: 1px solid #efefef;
+}
 .movies_content .movie_item .header {
   display: flex;
 }

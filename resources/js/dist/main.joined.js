@@ -19,6 +19,7 @@ moviesApplication.init = function(){
     moviesApplication.filterSlider();
     moviesApplication.getTypes();
     moviesApplication.getDirectors();
+    moviesApplication.generateMarkup();
 };
 
 moviesApplication.loadAssets = function(){
@@ -66,6 +67,41 @@ moviesApplication.getDirectors = function(){
         $('#directors').append('<option value="'+directorValue+'">'+directorValue+'</option>');
         }   
     });
+};
+
+moviesApplication.generateMarkup = function(){
+    
+    var template = '';
+    
+    $.each(moviesApplication.database, function(index){
+
+        var db = moviesApplication.database;
+        
+        template +='<div class="movie_item">';
+        template += '<div class="header">';
+        template +=   '<div class="left">';
+        template +=     '<img src="resources/images/movies/'+db[index].img+'">';
+        template +=   '</div>';
+        template +=   '<div class="right">';
+        template +=     '<h3>'+db[index].title+'</h3>';
+        template +=     '<div class="node">';
+        template +=      '<span>Year:</span> '+db[index].year+'';
+        template +=     '</div>';
+        template +=     '<div class="node">';
+        template +=         '<span>Director:</span> '+db[index].director+'';
+        template +=     '</div>';
+        template +=     '<div class="node">';
+        template +=         '<span>Category:</span> '+db[index].type+'';
+        template +=     '</div>';
+        template +=     '<div class="show_decs">See Description</div>';
+        template +='    </div>';
+        template +='  </div>';
+        template +='  <div class="description">';
+        template +=     '<strong>Description:</strong> '+db[index].desc+'';
+        template +='  </div>';
+        template +='</div>';
+    });
+    $('.movies_content').append(template);
 };
 
 
