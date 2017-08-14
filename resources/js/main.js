@@ -4,6 +4,7 @@ moviesApplication.database = [];
 moviesApplication.init = function(){
     moviesApplication.filterSlider();
     moviesApplication.getTypes();
+    moviesApplication.getDirectors();
 };
 
 moviesApplication.loadAssets = function(){
@@ -30,21 +31,28 @@ moviesApplication.filterSlider = function(){
 };
 
 moviesApplication.getTypes = function(){
-
-    var types = [];
-
-    $.each(moviesApplication.database, function(index, element){
-        if($.inArray(moviesApplication.database[index].type, types)){
-            var typeValue = moviesApplication.database[index].type;
-        types.push(typeValue);
-        $('#categories').append('<option value="'+typeValue+'">'+typeValue+'</option>');
-        }
-        
-
-        
+    var db = moviesApplication.database;
+    var categoriesArray = [];
+    $.each(db, function(index, element){
+        if($.inArray(db[index].type, categoriesArray)){
+            var categoryValue = db[index].type;
+        categoriesArray.push(categoryValue);
+        $('#categories').append('<option value="'+categoryValue+'">'+categoryValue+'</option>');
+        }   
     });
 };
 
+moviesApplication.getDirectors = function(){
+    var db = moviesApplication.database;
+    var directorsArray = [];
+    $.each(db, function(index, element){
+        if($.inArray(db[index].director, directorsArray)){
+            var directorValue = db[index].director;
+        directorsArray.push(directorValue);
+        $('#directors').append('<option value="'+directorValue+'">'+directorValue+'</option>');
+        }   
+    });
+};
 
 
 moviesApplication.loadAssets();

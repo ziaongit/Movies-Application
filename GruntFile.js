@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                 separator: '\n \n ',
              },
             dist: {
-                src: ['bower_components/jquery/dist/jquery.min.js', 'resources/js/main.js'],
+                src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'resources/js/main.js'],
                 dest: 'resources/js/dist/main.joined.js',
             },
             styles: {
