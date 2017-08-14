@@ -80,11 +80,58 @@ code {
 }
 /* Movies fileter styles end
 -------------------------------------------------- */
+.movies_content {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.movies_content .movie_item .header {
+  display: flex;
+}
+.movies_content .movie_item .header .left{
+  flex: 1;
+}
+.movies_content .movie_item .header .right{
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
+.movies_content .movie_item .header .left img {
+  width: 150px;
+}
+.movies_content .movie_item .header .right h3 {
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom:1px solid #dadada;
+  color: #f44336;
+}
+.movies_content .movie_item .header .right .node {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.movies_content .movie_item .header .right .node span {
+  font-weight: bold;
+}
+.movies_content .movie_item .header .right .show_decs {
+  position: absolute;
+  font-size: 13px;
+  background: #cacaca;
+  padding: 5px 10px;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.movies_content .movie_item .description {
+  background: #efefef;
+  padding: 20px;
+  font-size: 14px;
+  display: none;
+}
 
-/*  styles start
+/* Movies styles start
 -------------------------------------------------- */
 
-/*  styles end
+/* Movies styles end
 -------------------------------------------------- */
 
 /*  styles start
