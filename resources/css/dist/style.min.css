@@ -2414,6 +2414,7 @@ code {
 }
 .movies_filters .filter_container {
   border-top:1px solid #cacaca;
+  text-align: center;
   padding: 10px;
   background: #f3f3f3;
   display: none;

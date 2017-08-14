@@ -62,8 +62,8 @@ moviesApplication.generateMarkup = function(){
     $.each(moviesApplication.database, function(index){
 
         var db = moviesApplication.database;
-        
-        template +='<div class="movie_item">';
+
+        template +='<div class="movie_item" data-id="'+db[index].id+'">';
         template += '<div class="header">';
         template +=   '<div class="left">';
         template +=     '<img src="resources/images/movies/'+db[index].img+'">';
@@ -88,6 +88,62 @@ moviesApplication.generateMarkup = function(){
         template +='</div>';
     });
     $('.movies_content').append(template);
+
+    moviesApplication.showDescription();
+    moviesApplication.startFilter();
+};
+
+moviesApplication.showDescription = function(){
+    $('.show_decs').on('click', function(){
+        var $this = $(this);
+        var parent = $(this).parents().eq(2);
+        var element = parent.find('.description');
+        
+        element.slideToggle(300, function(){
+            if($this.hasClass('active')) {
+                $this.text('See Description').removeClass('active');
+            }else {
+                $this.text('Hide Description').addClass('active');
+            }
+        });
+    });
+};
+
+moviesApplication.startFilter = function(){
+    $('select').on('change', function(){
+
+        var db = moviesApplication.database;
+        var category = $('#categories').val();
+        var director = $('#directors').val();
+        var results = [];
+
+        $.each(db, function(index){
+            if(db[index].type === category){
+                results.push(db[index].id);
+            }
+
+            if(db[index].director === director){
+                results.push(db[index].id);
+            }
+        });
+
+        if(results.length<1) {
+            $('.movie_item').show();
+        }else {
+            var uniqueArray = [];
+            $.each(results, function(index, element){
+                if($.inArray(element, uniqueArray) == -1) uniqueArray.push(element);
+            });
+
+            $('.movie_item').hide();
+
+            $.each(uniqueArray, function(index, element){
+                $('div[data-id="'+element+'"]').show();
+            });
+
+        }
+
+    });
 };
 
 
