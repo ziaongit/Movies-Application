@@ -10,4 +10,7 @@ This is a detail oriented movies application built in JavaScript and jQuery for 
 5. Grun (grunt-contrib-concat, grunt-contrib-copy, grunt-contrib-uglify, grunt-contrib-watch)
 
 Fron 1 to 3 are installed using bower else with npm
- 
+
+## Demo
+
+ [Demo] (https://ziaongit.github.io/projects/movies-application/index.html)
